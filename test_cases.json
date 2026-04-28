@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "description": "Damaged product refund request",
+    "input": {
+      "message": "My product arrived broken and I want a refund"
+    },
+    "expected": {
+      "intent": "refund",
+      "urgency": "high",
+      "issue_severity": "high",
+      "risk_flag": "low",
+      "recommended_action": "refund",
+      "needs_human": true
+    }
+  },
+  {
+    "id": 2,
+    "description": "Late delivery complaint",
+    "input": {
+      "message": "My order is 2 weeks late, where is it?"
+    },
+    "expected": {
+      "intent": "delay",
+      "urgency": "medium",
+      "issue_severity": "medium",
+      "risk_flag": "low",
+      "recommended_action": "coupon",
+      "needs_human": false
+    }
+  },
+  {
+    "id": 3,
+    "description": "Fake / threatening complaint (high risk)",
+    "input": {
+      "message": "Give me free stuff or I will leave a very bad review everywhere"
+    },
+    "expected": {
+      "intent": "complaint",
+      "urgency": "high",
+      "issue_severity": "medium",
+      "risk_flag": "high",
+      "recommended_action": "escalate",
+      "needs_human": true
+    }
+  },
+  {
+    "id": 4,
+    "description": "Payment issue",
+    "input": {
+      "message": "I was charged twice for the same order"
+    },
+    "expected": {
+      "intent": "payment",
+      "urgency": "high",
+      "issue_severity": "high",
+      "risk_flag": "low",
+      "recommended_action": "refund",
+      "needs_human": true
+    }
+  },
+  {
+    "id": 5,
+    "description": "Vague / unclear complaint",
+    "input": {
+      "message": "Something is wrong I don't know"
+    },
+    "expected": {
+      "intent": "other",
+      "urgency": "low",
+      "issue_severity": "low",
+      "risk_flag": "high",
+      "recommended_action": "escalate",
+      "needs_human": true
+    }
+  },
+  {
+    "id": 6,
+    "description": "Arabic language input",
+    "input": {
+      "message": "المنتج وصل مكسور وأريد استرداد المبلغ"
+    },
+    "expected": {
+      "intent": "refund",
+      "urgency": "high",
+      "issue_severity": "high",
+      "risk_flag": "low",
+      "recommended_action": "refund",
+      "needs_human": true
+    }
+  },
+  {
+    "id": 7,
+    "description": "Wrong item delivered",
+    "input": {
+      "message": "You sent me the wrong item, this is not what I ordered"
+    },
+    "expected": {
+      "intent": "complaint",
+      "urgency": "medium",
+      "issue_severity": "medium",
+      "risk_flag": "low",
+      "recommended_action": "refund",
+      "needs_human": false
+    }
+  },
+  {
+    "id": 8,
+    "description": "General inquiry (low severity)",
+    "input": {
+      "message": "How long does delivery usually take?"
+    },
+    "expected": {
+      "intent": "inquiry",
+      "urgency": "low",
+      "issue_severity": "low",
+      "risk_flag": "low",
+      "recommended_action": "apology",
+      "needs_human": false
+    }
+  }
+]
